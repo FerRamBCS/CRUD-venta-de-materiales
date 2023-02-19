@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>RAMIREZ BRAVO EQUIPOS VENTAS</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet"> 
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+	<div class="contenedor">
+		<header>
+			<h1>SISTEMA VENTAS</h1>
+			<div>
+				<button id="btn_cargar_venta" class="btn active">Cargar venta</button>
+				<button id="btn_modificar_venta" class="btn active">Modificar venta</button>
+				<button id="btn_borrar_venta" class="btn active">Borrar venta</button>
+			</div>
+		</header>
+		<main>
+			<form action="php/insertar.php" method="POST" id="formulario" class="formulario">
+				<input type="date" name="fecha_Venta" id="fecha-Venta" placeholder="Fecha">
+				<input type="text" name="nombre" id="Nombre" placeholder="Nombre">
+				<input type="text" name="colonia" id="Colonia" placeholder="Colonia">
+				<input type="text" name="referencia" id="referencia" placeholder="Referencia">
+				<label for="material"></label>
+				<select name="material" id="material"> 
+					<option value="opcion" select="true" >Seleccione el material</option>
+					<option value="arena">Grava</option>
+					<option value="grava">Arena</option>
+					<option value="tierra">Tierra</option>
+				</select>
+				<label for="volumen"></label>
+				<select name="volumen" id="volumen">
+					<option value="opcion" select="true">Seleccione la cantidad</option>
+					<option value="0.5">0.5</option>
+					<option value="1">1</option>
+					<option value="1.5">1.5</option>
+					<option value="2">2</option>
+					<option value="2.5">2.5</option>
+					<option value="3">3</option>
+					<option value="3.5">3.5</option>
+					<option value="4">4</option>
+					<option value="4.5">4.5</option>
+					<option value="5">5</option>
+					<option value="5.5">5.5</option>
+					<option value="6">6.5</option>
+					<option value="7">7</option>
+					<option value="7.5">7.5</option>
+					<option value="8">8</option>
+				</select>
+				<input type="text" name="precio" id="precio" placeholder="Precio">
+				<input type="submit" name="registrar" value="Registrar">
+			</form>
+			<div class="error_box" id="error_box">
+				<p>Se ha producido un error.</p>
+			</div>
+			<table id="tabla" class="tabla">
+				<tr>
+					<th>Fecha</th>
+					<th>ID</th>
+					<th>Nombre</th>
+					<th>Colonia</th>
+					<th>Referencia</th>
+					<th>Material</th>
+					<th>Volumen</th>
+					<th>Total</th>
+				</tr>
+			</table>
+			<div class="loader" id="loader"></div>
+		</main>
+	</div>
+	<script src="js/main.js"></script>
+</body>
+</html>
