@@ -7,6 +7,17 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet"> 
 	<link rel="stylesheet" href="css/estilos.css">
 </head>
+<script>
+    function confirmacion() {
+        var respuesta = confirm("¿Desea realmente borrar el registro?");
+        if (respuesta == true) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+</script>
 <body>
 	<div class="contenedor">
 		<header>
@@ -94,12 +105,12 @@
 								echo "<td>".$fila[6]."</td>";
 								echo "<td>".$fila[7]."</td>";
 								echo "<td> 
-                        		<form action='php/eliminar.php' method='POST'>
-                        			<input type='hidden' name='id' value='".$fila["1"]."'>
-                        			<input type='hidden' name='nombre' value='".$fila["2"]."'>
-                        			<input type='submit' name='eliminar' value='Eliminar'>
-                        		</form>
-								</td>";
+                        			<form action='php/eliminar.php' method='POST'>
+                        				<input type='hidden' name='id' value='".$fila["1"]."'>
+                        				<input type='hidden' name='nombre' value='".$fila["2"]."'>
+                        				<input type='submit' name='eliminar' value='Eliminar' onclick= 'return confirmacion ()'>
+                        			</form>
+									</td>";
 								echo "</tr>";
 							}
 							mysqli_close($getconex);
@@ -109,6 +120,5 @@
 			<div class="loader" id="loader"></div>
 		</main>
 	</div>
-	<script src="js/main.js"></script>
 </body>
 </html>
