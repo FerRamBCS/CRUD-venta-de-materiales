@@ -71,7 +71,8 @@
 					<th>Material</th>
 					<th>Volumen</th>
 					<th>Total</th>
-				</tr>
+					<th>Eliminar</th>
+				</tr> 
 				</thead>
 				<tbody>
 					<?php
@@ -92,6 +93,13 @@
 								echo "<td>".$fila[5]."</td>";
 								echo "<td>".$fila[6]."</td>";
 								echo "<td>".$fila[7]."</td>";
+								echo "<td> 
+                        		<form action='php/eliminar.php' method='POST'>
+                        			<input type='hidden' name='id' value='".$fila["1"]."'>
+                        			<input type='hidden' name='nombre' value='".$fila["2"]."'>
+                        			<input type='submit' name='eliminar' value='Eliminar'>
+                        		</form>
+								</td>";
 								echo "</tr>";
 							}
 							mysqli_close($getconex);
