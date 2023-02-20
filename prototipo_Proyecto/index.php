@@ -9,7 +9,7 @@
 </head>
 <script>
     function confirmacion() {
-        var respuesta = confirm("¿Desea realmente borrar el registro?");
+        var respuesta = confirm("¡ALERTA!, Estas a punto de realizar esta accion, ¿Seguro que quieres continuar?");
         if (respuesta == true) {
             return true;
         } else {
@@ -62,7 +62,7 @@
 					<option value="8">8</option>
 				</select>
 				<label for="total"></label>
-				<input type="text" name="total" id="total" placeholder="total">
+				<input type="text" name="total" id="total" placeholder="Total">
 				<input type="submit" name="registrar" value="Registrar">
 				<!--<input type="submit" name="cargar" value="Cargar ventas">
 				<input type="submit" name="modificar" value="Modificar">
@@ -83,6 +83,7 @@
 					<th>Volumen</th>
 					<th>Total</th>
 					<th>Eliminar</th>
+					<th>Editar</th>
 				</tr> 
 				</thead>
 				<tbody>
@@ -109,6 +110,19 @@
                         				<input type='hidden' name='id' value='".$fila["1"]."'>
                         				<input type='hidden' name='nombre' value='".$fila["2"]."'>
                         				<input type='submit' name='eliminar' value='Eliminar' onclick= 'return confirmacion ()'>
+                        			</form>
+									</td>";
+								echo "</tr>";
+								echo "<td> 
+                        			<form action='php/editar.php' method='POST'>
+                        				<input type='hidden' name='id' value='".$fila["1"]."'>
+                        				<input type='hidden' name='nombre' value='".$fila["2"]."'>
+                        				<input type='hidden' name='colonia' value='".$fila["3"]."'>
+                        				<input type='hidden' name='referencia' value='".$fila["4"]."'>
+                        				<input type='hidden' name='material' value='".$fila["5"]."'>
+                        				<input type='hidden' name='volumen' value='".$fila["6"]."'>
+                        				<input type='hidden' name='total' value='".$fila["7"]."'>
+                        				<input type='submit' name='modificar' value='Modificar'>
                         			</form>
 									</td>";
 								echo "</tr>";
