@@ -12,23 +12,26 @@
 		<header>
 			<h1>SISTEMA VENTAS</h1>
 			<div>
-				<button id="btn_cargar_venta" class="btn active">Cargar venta</button>
-				<button id="btn_modificar_venta" class="btn active">Modificar venta</button>
-				<button id="btn_borrar_venta" class="btn active">Borrar venta</button>
+
 			</div>
 		</header>
 		<main>
-			<form action="php/insertar.php" method="POST" id="formulario" class="formulario">
-				<input type="date" name="fecha_Venta" id="fecha-Venta" placeholder="Fecha">
-				<input type="text" name="nombre" id="Nombre" placeholder="Nombre">
-				<input type="text" name="colonia" id="Colonia" placeholder="Colonia">
+			<form action="php/insertar.php" method="POST"class="formulario">
+				<label for="fecha_Venta"></label>
+				<input type="date" name="fecha_Venta" id="fecha_Venta">
+				<label for="nombre"></label>
+				<input type="text" name="nombre" id="nombre" placeholder="Nombre">
+				<label for="colonia"></label>
+				<input type="text" name="colonia" id="colonia" placeholder="Colonia">
+				<label for="referencia"></label>
 				<input type="text" name="referencia" id="referencia" placeholder="Referencia">
 				<label for="material"></label>
-				<select name="material" id="material"> 
+				<select name="material" id="material">
 					<option value="opcion" select="true" >Seleccione el material</option>
 					<option value="arena">Grava</option>
 					<option value="grava">Arena</option>
 					<option value="tierra">Tierra</option>
+
 				</select>
 				<label for="volumen"></label>
 				<select name="volumen" id="volumen">
@@ -49,8 +52,12 @@
 					<option value="7.5">7.5</option>
 					<option value="8">8</option>
 				</select>
+				<label for="total"></label>
 				<input type="text" name="precio" id="precio" placeholder="Precio">
 				<input type="submit" name="registrar" value="Registrar">
+				<!--<input type="submit" name="cargar" value="Cargar ventas">
+				<input type="submit" name="modificar" value="Modificar">
+				<input type="submit" name="borrar" value="Borrar">-->
 			</form>
 			<div class="error_box" id="error_box">
 				<p>Se ha producido un error.</p>
