@@ -26,8 +26,8 @@
 				<label for="material"></label>
 				<select name="material" id="material">
 					<option value="opcion" selected>Seleccione el material</option>
-					<option value="arena">Grava</option>
-					<option value="grava">Arena</option>
+					<option value="arena">Arena</option>
+					<option value="grava">Grava</option>
 					<option value="tierra">Tierra</option>
 
 				</select>
@@ -62,7 +62,7 @@
 			</div>
 			<table id="tabla" class="tabla">
 				<tr>
-
+					<th>Fecha</th>
 					<th>ID</th>
 					<th>Nombre</th>
 					<th>Colonia</th>
@@ -71,6 +71,8 @@
 					<th>Volumen</th>
 					<th>Total</th>
 				</tr>
+				<tbody action = "php/select.php">
+				</tbody>
 			</table>
 			<div class="loader" id="loader"></div>
 		</main>
