@@ -29,13 +29,13 @@
 		<main>
 			<form action="php/insertar.php" method="POST"class="formulario">
 				<label for="nombre"></label>
-				<input type="text" name="nombre" id="nombre" placeholder="Nombre">
+				<input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
 				<label for="colonia"></label>
-				<input type="text" name="colonia" id="colonia" placeholder="Colonia">
+				<input type="text" name="colonia" id="colonia" placeholder="Colonia" required>
 				<label for="referencia"></label>
-				<input type="text" name="referencia" id="referencia" placeholder="Referencia">
+				<input type="text" name="referencia" id="referencia" placeholder="Referencia" required>
 				<label for="material"></label>
-				<select name="material" id="material">
+				<select name="material" id="material" required>
 					<option value="opcion" selected>Seleccione el material</option>
 					<option value="arena">Arena</option>
 					<option value="grava">Grava</option>
@@ -43,7 +43,7 @@
 
 				</select>
 				<label for="volumen"></label>
-				<select name="volumen" id="volumen">
+				<select name="volumen" id="volumen" required>
 					<option value="opcion" select="true">Seleccione la cantidad</option>
 					<option value="0.5">0.5</option>
 					<option value="1">1</option>
@@ -62,7 +62,7 @@
 					<option value="8">8</option>
 				</select>
 				<label for="total"></label>
-				<input type="text" name="total" id="total" placeholder="Total">
+				<input type="text" name="total" id="total" placeholder="Total" required>
 				<input type="submit" name="registrar" value="Registrar">
 				<!--<input type="submit" name="cargar" value="Cargar ventas">
 				<input type="submit" name="modificar" value="Modificar">
